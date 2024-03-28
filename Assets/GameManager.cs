@@ -56,7 +56,12 @@ public class GameManager : MonoBehaviour
                 return;
             }
             fooling = value;
-            SendFooling(fooling);
+            try {
+                SendFooling(fooling);
+            }
+            catch (Exception e) {
+                Console.WriteLine(e);
+            }
         }
     }
 
@@ -72,6 +77,9 @@ public class GameManager : MonoBehaviour
 
 
     public int indexPort;
+
+
+    public string[] nomPorts;
 
 
     public int point;

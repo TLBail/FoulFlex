@@ -26,6 +26,7 @@ public class CarteManager : MonoBehaviour
     private void Start() {
         // get all children of the parent object
         ports = gameObject.GetComponentsInChildren<Transform>().Where((a) => a.CompareTag("port")).ToArray();
+        GameManager.Instance.nomPorts = ports.Select((p) => p.name).ToArray();
     }
     // get the index of the port near the boat
     // -1 if no port near

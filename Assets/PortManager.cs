@@ -14,7 +14,7 @@ public class PortManager : MonoBehaviour
     [SerializeField] public TMPro.TMP_Text textFouling;
 
     private void Start() {
-        textNomPort.text = "Port numéro : " + GameManager.Instance.indexPort;
+        textNomPort.text = "Port " + GameManager.Instance.nomPorts[GameManager.Instance.indexPort];
         GameManager.Instance.date = GameManager.Instance.date.AddDays(4);
         
         textFouling.text = "Fouling : " + (GameManager.Instance.Fooling * 100).ToString("0.0") + " %";
@@ -31,10 +31,10 @@ public class PortManager : MonoBehaviour
     private void Update() {
         //gamepad button 0 is press
         if (Input.GetKeyDown(KeyCode.JoystickButton0)) {
-            partir();
+            clean();
         }
         if (Input.GetKeyDown(KeyCode.JoystickButton1)) {
-            clean();
+            partir();
         }
 
     }
@@ -52,7 +52,12 @@ public class PortManager : MonoBehaviour
         animation.SetTrigger("clean");
         yield return new WaitForSeconds(1.0f);
         GameManager.Instance.Fooling = 0;
-        serial.clean();
+        try {
+            serial.clean();
+        }
+        catch (Exception e) {
+            Console.WriteLine(e);
+        }
         SceneManager.LoadScene(1);
     }
 }

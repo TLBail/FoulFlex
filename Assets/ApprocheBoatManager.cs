@@ -17,16 +17,21 @@ public class ApprocheBoatManager : MonoBehaviour
         
     }
 
+    private bool isammaring = false;
     private void Update() {
+        if(isammaring) return;
         //gamepad button 0 is press
         if (Input.GetKeyDown(KeyCode.JoystickButton0)) {
-            nettoyageEnMer();
+            isammaring = true;
+            ammarage();
         }
         if (Input.GetKeyDown(KeyCode.JoystickButton1)) {
-            boatentry();
+            isammaring = true;
+            nettoyageEnMer();
         }
 
     }
+
 
     public void ammarage() {
         StartCoroutine("boatentry");

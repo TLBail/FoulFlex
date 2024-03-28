@@ -30,12 +30,19 @@ public class Serial : MonoBehaviour
         {
             Debug.LogError("Fichier non trouvé : " + cheminFichier);
         }
-        
-        
-        sp = new SerialPort(PortName, BaudRate); 
-        sp.Open(); 
-        Debug.Log(sp); 
-        sp.ReadTimeout = 100; 
+
+
+
+        try {
+            sp = new SerialPort(PortName, BaudRate); 
+            sp.Open(); 
+            Debug.Log(sp); 
+            sp.ReadTimeout = 100; 
+
+        }
+        catch (Exception e) {
+            Console.WriteLine(e);
+        }
     }
 
 
