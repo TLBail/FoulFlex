@@ -20,7 +20,7 @@ public class ApprocheBoatManager : MonoBehaviour
     private void Update() {
         //gamepad button 0 is press
         if (Input.GetKeyDown(KeyCode.JoystickButton0)) {
-            ammarage();
+            nettoyageEnMer();
         }
         if (Input.GetKeyDown(KeyCode.JoystickButton1)) {
             boatentry();

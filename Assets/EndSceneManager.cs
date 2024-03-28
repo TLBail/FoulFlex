@@ -9,7 +9,7 @@ public class EndSceneManager : MonoBehaviour
 {
     [SerializeField] private TMP_Text textFin;
     private void Start() {
-        textFin.text = "Vous avez terminé le jeu avec " + GameManager.Instance.point + " points";
+        textFin.text = "Vous avez termine le jeu avec " + GameManager.Instance.point + " points";
     }
 
     

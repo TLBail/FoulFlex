@@ -5635,6 +5635,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 628938114}
   m_CullTransparentMesh: 1
+--- !u!1 &864506340
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 864506342}
+  - component: {fileID: 864506341}
+  m_Layer: 0
+  m_Name: ConnexionArduino
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &864506341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864506340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3643f6021f3806b4a99a923fc2baad04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PortName: com1
+  BaudRate: 0
+--- !u!4 &864506342
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864506340}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 471.48935, y: 311.15137, z: -26.87818}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1124499002
 GameObject:
   m_ObjectHideFlags: 0
@@ -6274,6 +6320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524ed492aa11ee84fa2a912a24b18d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serial: {fileID: 0}
   textNomPort: {fileID: 2043646910}
   portGameObject: {fileID: 91137560}
   particleSystem: {fileID: 54268994}
@@ -6305,3 +6352,4 @@ SceneRoots:
   - {fileID: 91137562}
   - {fileID: 518708036}
   - {fileID: 2030636543}
+  - {fileID: 864506342}

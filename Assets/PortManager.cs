@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PortManager : MonoBehaviour
 {
 
+    [SerializeField] public Serial serial;
     [SerializeField] public TMPro.TMP_Text textNomPort;
     [SerializeField] public GameObject portGameObject;
     [SerializeField] public ParticleSystem particleSystem;
@@ -51,6 +52,7 @@ public class PortManager : MonoBehaviour
         animation.SetTrigger("clean");
         yield return new WaitForSeconds(1.0f);
         GameManager.Instance.Fooling = 0;
+        serial.clean();
         SceneManager.LoadScene(1);
     }
 }
