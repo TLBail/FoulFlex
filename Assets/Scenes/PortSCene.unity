@@ -5664,8 +5664,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3643f6021f3806b4a99a923fc2baad04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PortName: com1
-  BaudRate: 0
+  PortName: COM3
+  BaudRate: 34800
 --- !u!4 &864506342
 Transform:
   m_ObjectHideFlags: 0
@@ -6320,7 +6320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 524ed492aa11ee84fa2a912a24b18d3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serial: {fileID: 0}
+  serial: {fileID: 864506341}
   textNomPort: {fileID: 2043646910}
   portGameObject: {fileID: 91137560}
   particleSystem: {fileID: 54268994}

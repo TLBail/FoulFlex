@@ -56,7 +56,18 @@ public class GameManager : MonoBehaviour
                 return;
             }
             fooling = value;
+            SendFooling(fooling);
         }
+    }
+
+
+    public OSC osc;
+    private void SendFooling(float f) {
+        //Todo send correct osc message
+        OscMessage message = new OscMessage();
+        message.address = "/fouling";
+        message.values.Add(f);
+        osc.Send(message);
     }
 
 
