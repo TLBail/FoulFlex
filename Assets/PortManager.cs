@@ -45,6 +45,7 @@ public class PortManager : MonoBehaviour
         StartCoroutine("portFlip");
     }
 
+    [SerializeField] private OSC osc;
 
     IEnumerator portFlip() {
         particleSystem.Play();
@@ -52,12 +53,11 @@ public class PortManager : MonoBehaviour
         animation.SetTrigger("clean");
         yield return new WaitForSeconds(1.0f);
         GameManager.Instance.Fooling = 0;
-        try {
-            serial.clean();
-        }
-        catch (Exception e) {
-            Console.WriteLine(e);
-        }
+        
+        OscMessage msg = new OscMessage();
+        msg.address = "/cleaning";
+        msg.values.Add(1);
+        osc.Send(msg);
         SceneManager.LoadScene(1);
     }
 }
