@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: 65302b01f94f78845a1714db128bbed2
+  - enabled: 1
+    path: Assets/Scenes/NettoyageOcean.unity
+    guid: 211b10adf0c5cd94ebdc99d3fb13d5da
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

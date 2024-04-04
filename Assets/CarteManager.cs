@@ -62,6 +62,11 @@ public class CarteManager : MonoBehaviour
         
     }
 
+
+    public void nettoyer() {
+        SceneManager.LoadScene(5);
+    }
+
     private float elapsedTime = 0;
 
     private void Update() {
@@ -89,6 +94,10 @@ public class CarteManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.JoystickButton0)) {
             samarrer();
+        }
+
+        if (Input.GetKeyDown(KeyCode.JoystickButton1)) {
+            nettoyer();
         }
     }
 }
