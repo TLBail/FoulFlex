@@ -24,6 +24,6 @@ public class EndSceneManager : MonoBehaviour
 
     public void ressayer() {
         GameManager.Instance.Reset();
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
